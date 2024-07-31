@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather In Your City</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <div class="text-top">
+        <h1 class="title-text">&nbsp&nbsp Weather In Your City</h1>
+        <hr>
+    </div>
+
+    <div class="jumbotron">
+        <div class="container" id="searchLine">
+            <div class="row form-group form-inline">
+                <input type="text" name="city" id="city" class="form-control" Placeholder="Enter City Name">
+                <button id="submitCity" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="error">
+        <span id="error"></span>
+    </div>
+    
+
+    <div id="results">
+        <span id="results"></span>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="main.js"></script>
+    
+</body>
+</html>

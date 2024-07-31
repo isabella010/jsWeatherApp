@@ -1,0 +1,56 @@
+.text-top{
+    margin-bottom:0px;
+    color: #e96e50;
+}
+
+.title-text{
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.jumbotron{
+    background: #e96e50;
+    background-image: radial-gradient(#e28d50,#e96e50);
+}
+
+#searchLine{
+    margin: auto;
+    text-align: center;
+    width: 70%;
+}
+
+#submitCity{
+    background-color: #e96e50;
+    border-color: #c1593f;
+}
+
+.error{
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+#results{
+    color: white;
+}
+
+#nav{
+    text-align: center;
+    font-size: 20px;
+}
+
+.table{
+    color: black;
+}
+
+.tdOne{
+    width: 31%;
+    text-align: right;
+}
+
+.tdTwo{
+    width: 50%;
+    text-align: left;
+    border:20px white;
+}
