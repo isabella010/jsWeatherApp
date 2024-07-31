@@ -7,7 +7,7 @@ $(document).ready(function(){
         var city = $("#city").val();
         if(city != ''){
             $.ajax({
-                url: "http://api.openweathermap.org/data/2.5/find?callback?&q=" + city + "&units=metric" + "&appid=97eaa9d3202c18880ca8bdc602e4905d",
+                url: "https://api.openweathermap.org/data/2.5/find?callback?&q=" + city + "&units=metric" + "&appid=97eaa9d3202c18880ca8bdc602e4905d",
                 type: "GET",
                 dataType: "jsonp",
                 async:false,
@@ -71,7 +71,7 @@ function moreData(){
     
     for (let i = 0; i < listData.list.length; i++) {
         $.ajax({ 
-            url: "http://api.openweathermap.org/data/2.5/weather?id=" + listData.list[i].id + "&units=metric" + "&appid=97eaa9d3202c18880ca8bdc602e4905d",
+            url: "https://api.openweathermap.org/data/2.5/weather?id=" + listData.list[i].id + "&units=metric" + "&appid=97eaa9d3202c18880ca8bdc602e4905d",
             type: "GET",
             dataType: "jsonp",
             async: false,
@@ -92,10 +92,10 @@ function display(sunData, i){
     return "<table class='table'>" +
     "<tr>" +
         "<td class='tdOne'>" +
-            "<img src='http://openweathermap.org/img/wn/" + listData.list[i].weather[0].icon + "@2x.png' </img>" +
+            "<img src='https://openweathermap.org/img/wn/" + listData.list[i].weather[0].icon + "@2x.png' </img>" +
         "</td>" +
         "<td class='tdTwo'>" +
-            "<p> <b>" + listData.list[i].name + ", " + listData.list[i].sys.country + " " + "<img src='http://openweathermap.org/images/flags/" + listData.list[i].sys.country.toLowerCase() + ".png'></img>" + " <i>" + listData.list[i].weather[0].description +"</i></b></p>" +
+            "<p> <b>" + listData.list[i].name + ", " + listData.list[i].sys.country + " " + "<img src='https://openweathermap.org/images/flags/" + listData.list[i].sys.country.toLowerCase() + ".png'></img>" + " <i>" + listData.list[i].weather[0].description +"</i></b></p>" +
             "<p> " + "<span class='badge badge-info'>" + listData.list[i].main.temp + "°С "+"</span>" + 
             " temperature from " + listData.list[i].main.temp_min + " to " + listData.list[i].main.temp_max + " °С," + 
             " wind " + listData.list[i].wind.speed + " m/s. clouds "+ listData.list[i].clouds.all + " %, " + listData.list[i].main.pressure + " hpa" + "</p>" +
