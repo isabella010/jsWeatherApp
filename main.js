@@ -29,24 +29,22 @@ $(document).ready(function(){
     });
 });
 
-var flag = 0;
 function displayHtml(returnedData, j){
     $("#results").html(returnedData);
     $("#city").val('');
+    $('#nav').remove(); // Remove previous pagination container if it exists
     $('#results').after('<div id="nav"></div>'); 
+
     var pages = Math.ceil(j / 3);  // Use Math.ceil to ensure pages are counted correctly
 
     if(pages > 1) {  // Only create pagination if there are more than one page
         $('#results tbody tr').hide();  
         $('#results tbody tr').slice(0, 3).show();
 
-        if(flag === 0){
-            for (var i = 0; i < pages; i++) {  
-                $('#nav').append('<a href="#" rel="' + i + '">' + (i + 1) + '</a> ');  
-            }
+        for (var i = 0; i < pages; i++) {  
+            $('#nav').append('<a href="#" rel="' + i + '">' + (i + 1) + '</a> ');  
         }
         
-        flag = 1;
         $('#nav a:first').addClass('active');  
         $('#nav a').bind('click', function() {  
             $('#nav a').removeClass('active');  
